@@ -1,3 +1,4 @@
+import 'package:firebase_authentication/controllers/bindings/authBinding.dart';
 import 'package:firebase_authentication/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      initialBinding: AuthBinding(),
       home: Login(),
     );
   }
