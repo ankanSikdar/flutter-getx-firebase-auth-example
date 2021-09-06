@@ -1,4 +1,6 @@
+import 'package:firebase_authentication/screens/signup.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
   Login({Key? key}) : super(key: key);
@@ -34,7 +36,9 @@ class Login extends StatelessWidget {
                 ),
                 SizedBox(height: 60.0),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(() => SignUp());
+                  },
                   child: Text('SignUp'),
                 ),
               ],

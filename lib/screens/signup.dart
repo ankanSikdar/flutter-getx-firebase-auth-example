@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({Key? key}) : super(key: key);
@@ -34,7 +35,9 @@ class SignUp extends StatelessWidget {
                 ),
                 SizedBox(height: 60.0),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.back();
+                  },
                   child: Text('Login'),
                 ),
               ],
