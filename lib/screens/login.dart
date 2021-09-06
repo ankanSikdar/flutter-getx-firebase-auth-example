@@ -1,9 +1,12 @@
+import 'package:firebase_authentication/controllers/authController.dart';
 import 'package:firebase_authentication/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
   Login({Key? key}) : super(key: key);
+
+  final AuthController authController = Get.find();
 
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
@@ -31,7 +34,12 @@ class Login extends StatelessWidget {
                 ),
                 SizedBox(height: 60.0),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    authController.login(
+                      email: emailController.text,
+                      password: passwordController.text,
+                    );
+                  },
                   child: Text('Login'),
                 ),
                 SizedBox(height: 60.0),
